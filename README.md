@@ -22,13 +22,16 @@ CI/CD: GitHub Actions
 Endpoints
 
 Initialize Payment: POST /api/v1/payment
+
 Verify Payment: GET /api/v1/payment/:reference
 
 Setup and Installation
 Prerequisites
 
 Node.js (v16 or later)
+
 NPM or Yarn
+
 Paystack account with API keys
 
 Testing
@@ -38,6 +41,7 @@ This application includes unit tests to validate API functionality. The tests ar
 Continuous Integration
 
 The project uses GitHub Actions for CI/CD to:
+
 Run automated tests on every push to the master branch.
 Ensure code quality and reliability.
 
