@@ -10,6 +10,12 @@ app.use(express.json())
 app.use("/api", v1Router)
 app.use("/api", v2Router)
 
+app.get("/", (req, res) => {
+  return res.status(200).json({
+    message: "Welcome to Max Payment Integration Server!",
+  })
+})
+
 app.use((req, res) => {
   res.status(404).json({ message: "This endpoints does not exist" })
 })
