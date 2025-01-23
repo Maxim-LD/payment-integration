@@ -1,15 +1,15 @@
-import { createRequire } from "module"
-const require = createRequire(import.meta.url)
 
 import app from "../src/app.js"
 import nock from "nock"
 import dotenv from "dotenv"
 import request from "supertest" // Correct import for supertest
-const chai = require("chai")
+//import { describe } from "mocha" // Added missing import
 
 dotenv.config()
 
+const chai = await import("chai")
 const { expect } = chai
+
 
 const PAYSTACK_URL = "https://api.paystack.co"
 const reference = "3lpa2kuj8h"
