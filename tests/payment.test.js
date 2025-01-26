@@ -42,7 +42,7 @@ describe("Payment API Test", () => {
       })
   })
 
-  // Test for verifying payment
+  //Test for verifying payment
   it("should successfully verify a payment", (done) => {
     nock(PAYSTACK_URL)
       .get(`/transaction/verify/${reference}`)
@@ -52,8 +52,9 @@ describe("Payment API Test", () => {
         data: { status: "success", reference },
       })
 
+    // Make a GET request to the payment verification endpoint and verify the response
     request(app)
-      .get(`/api/v1/payment/${reference}`) // Added missing leading slash
+      .get(`/api/v1/payment/${reference}`)
       .end((err, response) => {
         expect(response.status).to.equal(200)
         expect(response.body).to.have.property("status", true)
