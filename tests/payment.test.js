@@ -2,9 +2,7 @@
 import app from "../src/app.js"
 import nock from "nock"
 import dotenv from "dotenv"
-import request from "supertest" // Correct import for supertest
-//import { describe } from "mocha" // Added missing import
-
+import request from "supertest" 
 dotenv.config()
 
 const chai = await import("chai")
